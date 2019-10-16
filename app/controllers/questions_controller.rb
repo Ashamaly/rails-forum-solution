@@ -11,9 +11,18 @@ class QuestionsController < ApplicationController
     end
 
     def create
-        Question.create(question_params)
-        redirect_to root_path
+        redirect_to Question.create(question_params)
     end
+
+    def new
+        render plain: ""
+    end
+
+    def edit
+        render plain: ""
+    end
+
+
 
     private
     def question_params

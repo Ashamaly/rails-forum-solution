@@ -4,4 +4,6 @@ class Question < ApplicationRecord
 
     has_many :answers
        
+    validates :email, presence: true
+    validates :body
 end
